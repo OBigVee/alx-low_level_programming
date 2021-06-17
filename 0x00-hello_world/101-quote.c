@@ -6,7 +6,8 @@
  *    */
 int main(void)
 {
-	char arr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char arr[] =
+		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	write(2, arr, sizeof(arr));
 	return (1);
 }
