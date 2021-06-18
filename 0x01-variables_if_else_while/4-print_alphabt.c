@@ -5,13 +5,17 @@
  */
 int main(void)
 {
-char a = 'a';
-while (a <= 'z'){
-	if (a!='e' && a!='q'){
-        putchar(a);
+	char alpha = 'a';
+
+	while (alpha <= 'z')
+	{
+		if (alpha != 'e' && alpha != 'q')
+		{
+			putchar(alpha);
+		}
+		alpha++;
 	}
-	a++;
-}
+
 	putchar('\n');
 	return (0);
 }
