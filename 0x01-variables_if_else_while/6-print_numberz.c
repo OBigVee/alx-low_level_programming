@@ -6,13 +6,11 @@
  * Return: 0
  */
 int main(void){
-char number = '0';
-  while(number <= '9'){
-    putchar(number); 
+char number = 0;
+  while(number <10){
+    putchar(48+number); 
     number++;
-	putchar('\n');
     }
-  
-  
+  putchar('\n');
   return (0);
 }
