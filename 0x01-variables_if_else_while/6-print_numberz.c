@@ -6,7 +6,7 @@
  * Return: 0
  */
 int main(void){
-char number = 0;
+int number = 0;
   while(number <10){
     putchar(48+number); 
     number++;
