@@ -15,7 +15,7 @@ int main(void)
 		a++;
 	}
 
-	A = 'A';
+	char A = 'A';
 	while (A <= 'Z')
 	{
 
