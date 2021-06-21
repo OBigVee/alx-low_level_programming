@@ -1,4 +1,4 @@
-# How to compile C files with gcc, step by step.
+# step by step procedure to compile C code with gcc
 
 
 (https://steffanynaranjo.medium.com/how-to-compile-c-files-with-gcc-step-by-step-5939ab8a6c47)
