@@ -9,7 +9,7 @@ int print_alphabet(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int idx = 0;
-	while (idx < (int) strlen(alphabet))
+	while (idx < 26)
 	{
 		_putchar(alphabet[idx]);
 		idx++;
