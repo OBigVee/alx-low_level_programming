@@ -8,12 +8,11 @@
 void print_alphabet(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-	int idx = 0;
-	while (idx < 26)
+	int idx;
+	for(idx=0 ; idx < (int) strlen(alphabet) ; idx++)
 	{
 		_putchar(alphabet[idx]);
-		idx++;
 	}
 	_putchar('\n');
-	return;
+	
 }
