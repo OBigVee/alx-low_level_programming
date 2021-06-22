@@ -7,12 +7,9 @@
  */
 void print_alphabet(void)
 {
-	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-	int idx;
-	for(idx=0 ; idx < (int) strlen(alphabet) ; idx++)
-	{
-		_putchar(alphabet[idx]);
-	}
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+		_putchar(c);
 	_putchar('\n');
-	
 }
