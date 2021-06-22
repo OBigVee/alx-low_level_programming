@@ -5,7 +5,7 @@
  * main - Entry
  * return - 0
  * */
-int main(void)
+int print_alphabet(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int idx = 0;
