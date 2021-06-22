@@ -1,3 +1,4 @@
+#include <string.h>
 #include"holberton.h"
 /**
  * print_alphabet - Entry point
@@ -5,9 +6,12 @@
  */
 void print_alphabet(void)
 {
-	char c;
+	char alphabet [26] ="abcdefghijklmnopqrstuvwxyz";
+	int idx;
 
-	for (c = 'a'; c <= 'z'; c++)
-		_putchar(c);
+	for (idx = 0 ; idx < (int)strlen(alphabet); idx++)
+	{
+		_putchar(alphabet[idx]);
+	}
 	_putchar('\n');
 }
