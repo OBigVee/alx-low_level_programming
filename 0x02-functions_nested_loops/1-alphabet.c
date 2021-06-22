@@ -12,5 +12,5 @@ for (idx = 0 ; (idx < (int)strlen(alphabet)-4) ; idx++)
 {
 	_putchar(alphabet[idx]);
 }
-	_putchar("\n");
+	_putchar('\n');
 }
