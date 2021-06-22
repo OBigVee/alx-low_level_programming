@@ -5,7 +5,7 @@
  * print_alphabet - Entry point
  * Return:0
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int idx = 0;
