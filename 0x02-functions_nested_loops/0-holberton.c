@@ -1,3 +1,4 @@
+#include <string.h>
 #include"holberton.h"
 
 /** 
@@ -9,7 +10,7 @@
  {
  char str[10] = "Holberton";
  int idx = 0;
- while (idx < 9)
+ while (idx < (int) strlen(str))
  {
  _putchar(str[idx]);
  idx++;
