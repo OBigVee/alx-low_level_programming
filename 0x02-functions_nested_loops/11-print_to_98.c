@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - prints every number from n to 98
- * @n: starting number
+ * print_to_98 - prints number from n to 98
+ * @n: initial number
  */
 void print_to_98(int n)
 {
