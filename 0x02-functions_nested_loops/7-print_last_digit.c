@@ -6,12 +6,12 @@
  */
 int print_last_digit(int n)
 {
- unsigned int abs;
+  int abs;
   if(n<0)
   {
     abs = (-1 * n);
   }
-  unsigned int lastDigit = abs % 10;
+  int lastDigit = abs % 10;
   
     return (lastDigit);
 }
