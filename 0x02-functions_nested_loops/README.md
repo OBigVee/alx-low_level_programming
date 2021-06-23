@@ -16,19 +16,9 @@ e.g to use the ```printf()``` function in ```C``` you need to include the ```std
 note that the header files generally contain definitions of data types, function prototypes and C prprocessor commands.
 * step 1:
   let's create an header file named holberton.h
-``` #include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+``` 
+it contains the declare of functions prototype
 int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 ````
 
 * step 2
