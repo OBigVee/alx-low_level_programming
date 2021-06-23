@@ -19,8 +19,7 @@ else if (i%5 == 0)
 sum5 += i;
 }
 }
-printf("sum of multiple of 3 is %d\n",sum3);
-printf("sum of multiple of 5 is %d\n",sum5);
+printf("%d",sum3);
 return (0);
 
 }
