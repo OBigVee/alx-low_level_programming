@@ -16,6 +16,6 @@ if(i % 3 == 0 || i % 5 == 0)
 sum_multiple3_5 += i;
 }
 }
-printf("%d ",sum_multiple3_5);
+printf("%d ", sum_multiple3_5);
 return (0);
 }
