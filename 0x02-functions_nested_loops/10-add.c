@@ -6,6 +6,7 @@
 *@b: value 2
 *Return : the result
 */
+
 int add(int a,int b)
 {
 int sum = a + b;
