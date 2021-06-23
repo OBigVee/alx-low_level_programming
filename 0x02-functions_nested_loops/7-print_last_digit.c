@@ -11,7 +11,7 @@ int print_last_digit(int n)
   {
     abs = (-1 * n);
   }
-  int lastDigit = abs % 10;
+  unsigned int lastDigit = abs % 10;
   
     return (lastDigit);
 }
