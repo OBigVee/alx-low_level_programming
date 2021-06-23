@@ -4,9 +4,10 @@
  *
  *Return: the value of the last digit.
  */
+int abs;
 int print_last_digit(int n)
 {
-  int abs;
+  
   if(n<0)
   {
     abs = (-1 * n);
