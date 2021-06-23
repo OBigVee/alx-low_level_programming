@@ -7,20 +7,18 @@
  *
  * Return: Always 0.
  */
-
 void print_to_98(int n)
 {
-while(n<=98)
-{
-printf("%d", n);
-++n;
-if(n == 98)
-{
-break;
-}
-else
-{
-printf(", ");
-}
-}
+  for (n;n<=98;n++)
+  {
+  printf("%d",n);
+  if (n == 98)
+  {
+    break;
+  }
+  else
+  {
+  printf(", ");
+  }
+  }
 }
