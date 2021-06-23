@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "holberton.h"
+
 /**
 *
 */
 int _islower(int c)
 {
-islower(c) ? return (1) : return (0);
+return (c >= 97 && c <= 122);
+
 }
 
