@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-*add - sums two values up
-*@a: value 1
-*@b: value 2
-*Return : the result
+* add - sum two values
+* @a: The first number to be computed
+* @b: The second number to be computed
+* Return: Integer value
 */
 
 int add(int a,int b)
