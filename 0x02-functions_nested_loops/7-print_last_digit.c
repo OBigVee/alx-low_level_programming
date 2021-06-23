@@ -1,18 +1,19 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  *print_last_digit - print last digit.
  *
  *Return: the value of the last digit.
  */
-int abs;
+
 int print_last_digit(int n)
 {
-  
-  if(n<0)
-  {
-    abs = (-1 * n);
+  int lastDigit;
+  lastDigit = n%10 //
+  if(lastDigit<0)// -ve take the absolute
+  { 
+   lastDigit =  abs(lastDigit);
   }
-  int lastDigit = abs % 10;
   
-    return (lastDigit);
+   return (lastDigit);
 }
