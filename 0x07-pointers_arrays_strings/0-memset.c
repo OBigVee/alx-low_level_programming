@@ -3,17 +3,17 @@
 
 /**
  * _memset - fills memomry with c constat byte
- * @ptr: starting address of memory to be filled
- * @x: value to be filled
+ * @s: starting address of memory to be filled
+ * @b: value to be filled
  * @n: number of bytes to be filled starting  from ptr
  * Return:pointer to the memory
  */
 
-char *_memset(char *ptr, char x, unsigned int n )
+char *_memset(char *s, char b, unsigned int n )
 {
-	char *str = ptr;
+	char *ptr = s;
 	while(n--){
-		*ptr++ = x;
+		*s++ = x;
 	}
-	return (ptr);
+	return (s);
 }
