@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * puts_recursion - prints fillowed by new line
+ * _puts_recursion - prints fillowed by new line
  * @s s: string to be returned
- * Retuern : return each char
+ * Return : void
  */
 
 void _puts_recursion(char *s)
@@ -14,5 +14,5 @@ void _puts_recursion(char *s)
 		return;
 	}
 	_putchar(*s);
-	_puts_recursion(s+1);
+	_puts_recursion(s + 1);
 }
