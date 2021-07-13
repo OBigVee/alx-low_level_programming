@@ -1,1 +1,1 @@
-# C Satic libraries
+# C Static libraries
