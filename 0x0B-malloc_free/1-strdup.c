@@ -12,6 +12,7 @@
 
 char *_strdup(char *str)
 {
+int i = 0;
 int size = 0;
 char *m;
   
@@ -25,8 +26,8 @@ if(m == 0)
 return (NULL);
 else
 {
-while(str++)
-strcpy(m,str);
+while(i++)
+strcpy(m[i],str[i]);
 } 
   return (m);
 }
