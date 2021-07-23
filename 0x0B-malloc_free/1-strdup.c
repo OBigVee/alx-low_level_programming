@@ -21,7 +21,7 @@ return (NULL);
 }
 for (; str[size] != '\0'; size++)
 ;
-m = malloc (size * sizeof(str) + '\0');
+m = malloc(size * sizeof(str) + '\0');
 if (m == 0)
 return (NULL);
 else
