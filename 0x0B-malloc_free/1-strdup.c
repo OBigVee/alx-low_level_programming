@@ -11,11 +11,10 @@
 */
 
 char *_strdup(char *str){
-int i, size;
-i = 0;
+int size;
 size = 0;
 char *m;
-if(str=='\0'){
+if(str== NULL){
 return(NULL);
 }
   
