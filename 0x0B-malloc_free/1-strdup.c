@@ -21,15 +21,16 @@ if(str== NULL)
 return(NULL);
 }
 for(; str[size] != '\0'; size++);
+println("%d",size);
 m = malloc(size * sizeof(str) + '\0');
 if(m == 0)
 return (NULL);
 else
 {
-while(i++){
+for(; i<size; i++){
 m[i] = str[i];
 }
 
 } 
-  return (m);
+return (m);
 }
