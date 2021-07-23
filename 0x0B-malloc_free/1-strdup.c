@@ -10,18 +10,23 @@
 * Return : pointer with a new allocated memory space.
 */
 
-char *_strdup(char *str){
+char *_strdup(char *str)
+{
 int size = 0;
 char *m;
   
-if(str== NULL){
+if(str== NULL)
+{
 return(NULL);
 }
-  
 for(; str[size] != '\0'; size++);
 m = malloc(size * sizeof(str) + '\0');
+if(m == 0)
+return (NULL);
+else
+{
 while(str++)
 strcpy(m,str);
-  
-   return (m);
+} 
+  return (m);
 }
