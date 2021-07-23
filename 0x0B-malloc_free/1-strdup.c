@@ -21,7 +21,7 @@ if(str== NULL)
 return(NULL);
 }
 for(; str[size] != '\0'; size++);
-println("%d",size);
+printf("%d",size);
 m = malloc(size * sizeof(str) + '\0');
 if(m == 0)
 return (NULL);
