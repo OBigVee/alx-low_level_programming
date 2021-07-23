@@ -26,8 +26,10 @@ if(m == 0)
 return (NULL);
 else
 {
-while(i++)
-strcpy(m[i],str[i]);
+while(i++){
+m[i] = str[i];
+}
+// strcpy(m[i],str[i]);
 } 
   return (m);
 }
