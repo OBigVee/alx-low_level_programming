@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
 *create_array - function creates an array with init values 
 *and retrun 0 if size == 0
