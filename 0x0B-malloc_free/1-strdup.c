@@ -19,13 +19,14 @@ if (str == NULL)
 {
 return (NULL);
 }
-for (; str[size] != '\0'; size++);
+for (; str[size] != '\0'; size++)
+;
 m = malloc (size * sizeof(str) + '\0');
 if (m == 0)
 return (NULL);
 else
 {
-for (; i<size; i++)
+for (; i < size; i++)
 m[i] = str[i];
 } 
 return (m);
