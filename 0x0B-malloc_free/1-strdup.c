@@ -29,7 +29,7 @@ else
 while(i++){
 m[i] = str[i];
 }
-// strcpy(m[i],str[i]);
+
 } 
   return (m);
 }
