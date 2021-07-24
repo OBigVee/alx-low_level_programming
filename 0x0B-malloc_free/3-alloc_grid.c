@@ -13,9 +13,10 @@
 int **alloc_grid(int width, int height){
     int row = 0;
     int col = 0;
+    int **m;
     width = 0;
     height = 0;
-    int **m;
+   
     if (width <= 0 || height <= 0){
         return  (NULL);
         }
@@ -30,7 +31,7 @@ int **alloc_grid(int width, int height){
             for(; row < width; ++row){
                 /* create or allocate memory for type int * the number of width*/
                     m[row] = malloc(sizeof(** m)*width);
-                    if(m[row] == 0){
+                    if (m[row] == 0){
                         /*free mem*/
                         while(row--){
                             free(m[row]);
