@@ -11,12 +11,12 @@
  */
 
 int **alloc_grid(int width, int height){
-    int **m;    
     width = 0;
     height = 0;
     int row = 0;
     int col = 0;
-    if (width == NULL || height == NULL || width <= 0 || height <= 0){
+    int **m;
+    if (width <= 0 || height <= 0){
         return  (NULL);
         }
 
