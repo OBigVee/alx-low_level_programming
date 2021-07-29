@@ -25,18 +25,3 @@ int print_last_digit(int n)
 	_putchar(lastDigit + 48);
 	return (lastDigit);
 }
-
-
-/*{
-  int lastDigit;
-  lastDigit = n%10;
-  if(lastDigit<0)
-  { 
-   lastDigit =  abs(lastDigit);
-    _putchar(lastDigit % 10 + '0');
-  }
-  
-  
-  return (lastDigit);
-}*/
-
