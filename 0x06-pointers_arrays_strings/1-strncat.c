@@ -1,24 +1,54 @@
+#include <stdio.h>
 #include "holberton.h"
-/**
- * *_strncat - concatenates n bytes of two strings
- * @dest: pointer destination
- * @src: pointer source
- * @n: number of bytes
- * Return: void
-*/
 
+/**
+ *_strlen - returns the length of a string
+ *@str:a string of length to be returned
+ *Return: returns the length of a string
+ */
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (*str)
+	{
+		str++;
+		length++;
+	}
+
+	return (length);
+
+}
+
+
+/**
+ *_strncat - concatinates two strings
+ *@dest:destination pointer
+ *@src:pointer to a string
+ *@n:amount tot be concatenated
+ *Return: concatinated string
+ */
 char *_strncat(char *dest, char *src, int n)
 {
+	char *cat = dest + _strlen(dest);
+	int length;
 
-int dest_len, i;
-for (dest_len = 0; dest[dest_len] != '\0'; dest_len++)
-;
+	if (n > _strlen(src) + _strlen(dest))
+		length =  _strlen(dest) + _strlen(src);
+	else
+		length = _strlen(dest) + n;
 
-for (i = 0; i < n && src[i] != '\0'; i++)
-	dest[dest_len + i] = src[i];
+	while (*src && n > 0)
+	{
+		*cat += *src;
+		src++;
+		cat++;
+		n--;
+	}
+	if (n > 0)
+		*cat += '\0';
+	cat -= (length);
+	*dest = *cat;
 
-/*should end with a end of string char*/
-dest[dest_len + i] = '\0';
-
-return (dest);
+	return (cat);
 }
