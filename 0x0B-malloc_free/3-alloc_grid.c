@@ -1,48 +1,47 @@
-#include <stdio.h>
+#include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * **alloc_grid - function creates an array with init values 
- * and retrun 0 if size == 0
- * @width: size of array
- * @height: char to init
- * Return: pointer to the array init or NULL
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers
+ * @width: width of array
+ * @height: height of array
+ * Return: double pointer to multi-dimen array
  */
+int **alloc_grid(int width, int height)
+{
+	int **grid, r, c;
 
-int **alloc_grid(int width, int height){
-    int row = 0;
-    int col = 0;
-    int **m;
-    width = 0;
-    height = 0;
-   
-    if (width <= 0 || height <= 0){
-        return  (NULL);
-        }
+	if (width <= 0 || height <= 0)
+	{
+		return (NULL);
+	}
 
-        /* create a memory */
-        m = malloc(sizeof(*m) * height);
-        if (!m){
-            return (NULL);
-        }
-        else{
-            /*ROW*/
-            for(; row < width; ++row){
-                /* create or allocate memory for type int * the number of width*/
-                    m[row] = malloc(sizeof(** m)*width);
-                    if (m[row] == 0){
-                        /*free mem*/
-                        while(row--){
-                            free(m[row]);
-                            }
-                        free(m);
-                        return (NULL);
-                        }
-                    for (; col < height; ++col){
-                        m[row][col] = 0;
-                        }
-                    }
-            }
-    return(0);
+	grid = malloc(sizeof(int *) * height);
+	/*if memory is insifficuent*/
+	if (!grid)
+		return (NULL);
+
+	c = 0;
+	while (c < height)
+	{
+		*(grid + c) = malloc(width * sizeof(int));
+
+		if (!(*(grid + c)))
+		{
+			while (c--)
+				free(*(grid + c));
+			free(grid);
+			return (NULL);
+		}
+		r = 0;
+		while (r < width)
+		{
+			*(*(grid + c) + r) = 0;
+			r++;
+
+		}
+		c++;
+	}
+
+	return (grid);
 }
