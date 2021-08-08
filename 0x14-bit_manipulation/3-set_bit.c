@@ -6,7 +6,7 @@
  * @index: index of the bit
  * Return: 1 (success) or -1(faillure)
  */
-
+#define BYTE_LEGHT 8;
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	if (index >= (sizeof(unsigned long int) * BYTE_LENGHT))
