@@ -2,6 +2,7 @@
 #define HOLBERTON_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 void _puts(char *str);
 void *malloc_checked(unsigned int b);
@@ -12,5 +13,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _putchar(char c);
 int _atoi(const char *s);
 void print_int(unsigned long int n);
+int _strlen(char *);
+char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int onlyNumbers(char *c);
+void multiply(char* s1, char* s2);
 
 #endif
