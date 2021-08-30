@@ -1,26 +1,26 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * flip_bits - number of different bits between two numbers
- * @n: first number
- * @m: second number
- *
- * Return: number of bits you would need to flip
- * to get from one number to another.
+ * flip_bits - returns the differeces about digits between 2 numbers.
+ * @n: the input number1
+ * @m: input number 2
+ * Return: the diferences
  */
+
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int diff, check;
-	unsigned int count, i;
+	unsigned long int bit_diff, mask = 0;
+	int i, digit;
+	unsigned int differences = 0;
 
-	count = 0;
-	check = 1;
-	diff = n ^ m;
-	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
+	bit_diff = n ^ m;/*1 if bit_n != bit_m (XOR)*/
+
+	for (i = 63; i >= 0; i--)
 	{
-		if (check == (diff & check))
-			count++;
-		check <<= 1;
+		mask = 1 << i;/*Creating a mask for extract the digit*/
+		digit = (bit_diff & mask) >> i;/*Extract the digit and push to 0 or 1*/
+		if (digit == 1)
+			differences++;
 	}
-	return (count);
+	return (differences);
 }
