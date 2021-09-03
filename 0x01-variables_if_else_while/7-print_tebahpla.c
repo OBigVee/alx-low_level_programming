@@ -1,19 +1,19 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * main - prints out the alphabet in reverse
- * Return: 0
+ * print_last_digit - return last digit
+ * @n : number to check
+ * Return:0 or 1
  */
-int main(void)
+
+int print_last_digit(int n)
 {
-	char z = 'z';
+	int nv;
 
-	while (z >= 'a')
-	{
-		putchar(z);
-		z--;
-	}
+	if (n < 0)
+		nv = -1 * (n % 10);
+	else
+		nv = n % 10;
 
-	putchar('\n');
-	return (0);
+	_putchar(nv + '0');
+		return (nv);
 }
