@@ -1,21 +1,25 @@
 #include "main.h"
 
 /**
- * _strncpy - copies a string
- * @dest: copy destination
- * @src: copy source
- * @n: bytes to be copied
- * Return: copied string
+ * _strcmp - compares two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: 1 if true, 0 if false
  */
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	char *ptr = dest;
+	int equal = 0;
 
-	while (*src && n--)
-		*dest++ = *src++;
-	if (!*src)
-		while (*dest && n--)
-			*dest++ = 0;
-	return (ptr);
+	while (*s1)
+	{
+		if (*s1 != *s2)
+		{
+			equal = ((int)*s1 - 48) - ((int)*s2 - 48);
+			break;
+		}
+		s1++;
+		s2++;
+	}
+	return (equal);
 }
 
