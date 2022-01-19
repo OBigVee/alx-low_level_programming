@@ -9,8 +9,8 @@
  *          if @value is not present in @array or if @array is
  *          NULL returns -1
  *
- *  Everytime a value is compare in the array to the value you are searching the
- *  the function prints the value
+ * Everytime a value is compare in the array to the value you are searching the
+ * the function prints the value
  */
 int linear_search(int *array, size_t size, int value)
 {
