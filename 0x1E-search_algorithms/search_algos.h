@@ -2,8 +2,9 @@
 #define SEARCH_ALGO_SEARCH_ALGOS_H
 
 #include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 
 int linear_search(int *array, size_t size, int value);
