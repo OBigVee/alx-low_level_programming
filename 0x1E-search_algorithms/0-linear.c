@@ -1,8 +1,4 @@
 #include "search_algos.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 /**
  * linear_search - search for a value in an array of intergers
  * @array: pointer to the first element of the array to search in
@@ -26,7 +22,6 @@ for (i; i < size; ++i)
 printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 if (array[i] == value)
 return (i);
-i++;
 }
 return (-1);
 }
