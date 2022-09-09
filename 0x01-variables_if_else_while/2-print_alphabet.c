@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
  * main - Entry code
@@ -15,7 +16,7 @@ int main(void)
 		putchar(a);
 		a++;
 	}
-	putchar('/n');
+	putchar('\n');
 	return(0);
 }
 
