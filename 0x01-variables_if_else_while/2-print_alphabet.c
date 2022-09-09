@@ -1,4 +1,4 @@
-#include
+#include <stdio.h>
 /**
  * main - Entry code
  * Description: prints "alphabets"
@@ -16,6 +16,6 @@ int main(void)
 		a++;
 	}
 	putchar('/n');
-	return(0):
+	return(0);
 }
 
