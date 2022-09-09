@@ -11,7 +11,7 @@ int main(void)
 	int a = 0;
 	int z = 10;
 
-	while (a <= z)
+	while (a < z)
 	{
 		putchar(49 + a);
 		a++;
