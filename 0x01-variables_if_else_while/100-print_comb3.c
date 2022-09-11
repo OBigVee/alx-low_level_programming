@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *  main: main entry
+ *  main - Entry code
  *  Description: prints all possible combination of 2 digits
  *  INTSTUCTIONS;
  *  the two digits must be different,
