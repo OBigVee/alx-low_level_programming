@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *  main -main entry
- *  Description - prints all possible combination of 2 digits
+ *  main: main entry
+ *  Description: prints all possible combination of 2 digits
  *  INTSTUCTIONS;
  *  the two digits must be different,
  *  01 and 10 are considered the same combination of the two digits 0 and 1
@@ -12,7 +12,7 @@
  *	(every other function (printf, puts, etc…) is forbidden)
  *  You can only use putchar five times maximum in your code
  *  You are not allowed to use any variable of type char
- *  Return - 0
+ *  Return: 0
  */
 int main(void)
 {
