@@ -34,7 +34,7 @@ int main(void)
 					putchar(48 + start);
 					putchar(48 + c);
 					putchar(48 + d);
-					if (c + start != 17)
+					if (d + c + start != 9 + 8 + 7)
 					{
 						putchar(',');
 						putchar(' ');
