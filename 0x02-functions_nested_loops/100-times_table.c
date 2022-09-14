@@ -16,12 +16,33 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			if (n < 0 || n > 15)
-			{
 				continue;
-			} else
+			else
 			{
 				result = i * j;
-				printf("%d, ", result);
+				if (result == 0)
+					_putchar(48 + result);
+				else if (result < 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(48 + result);
+				} else if (result < 100)
+				{
+					_putchar(' ');
+					_putchar(48 + result / 10);
+					_putchar(48 + result % 10);
+				} else
+				{
+					_putchar(48 + result / 100);
+					_putchar(48 + (result - 100) / 10);
+					_putchar(48 + result % 10);
+				}
+				if (j < n)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 		}
 	}
