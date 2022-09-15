@@ -36,6 +36,8 @@ int main(void)
 			printf("Buzz ");
 		} else
 		{
+			if (num == 100)
+				printf("%d", num);
 			printf("%d ", num);
 		}
 	}
