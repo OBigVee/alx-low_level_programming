@@ -10,21 +10,17 @@
  */
 void print_triangle(int size)
 {
-	int i, j;
+	int i;
 	int calibrate;
 
-	for (i = 0; size > 0 && i <= size; i++)
+	calibrate = size;
+	if (size < 0)
+		_putchar('\n');
+	while (size > 0)
 	{
-		for (calibrate = 0; calibrate < size - i; calibrate++)
-		{
-			_putchar(32);
-		}
-		for (j = 0; j < i; j++)
-		{
-			_putchar(35);
-		}
+		for (i = 0; i < calibrate; i++)
+			_putchar((i < size - 1) ? ' ' : '#');
 		_putchar('\n');
+		size--;
 	}
-	if (i == 0)
-		_putchar('\n');
 }
