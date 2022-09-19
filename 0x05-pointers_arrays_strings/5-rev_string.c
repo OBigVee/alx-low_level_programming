@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
   * rev_string - function reverses a string
@@ -9,5 +10,17 @@
 
 void rev_string(char *s)
 {
-	print_rev(s);
+	int j, s_size, temp;
+
+	s_size = strlen(s);
+
+	j = 0;
+	while (j < (s_size / 2))
+	{
+		temp = s[j];
+		s[j] = s[s_size];
+		s[s_size] = temp;
+		s_size--;
+		j++;
+	}
 }
