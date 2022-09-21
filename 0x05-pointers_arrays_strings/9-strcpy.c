@@ -17,10 +17,14 @@ char *_strcpy(char *dest, char *src)
 
 	size_src = strlen(src);
 
-	for (i = 0; i < size_src;)
+	for (i = 0; i < size_src && src[i] != '\0';)
 	{
 		*(dest + i) = *(src + i);
 		i++;
+	}
+	for (; i == src[i]; i++)
+	{
+		*(dest + i) = '\0';
 	}
 	return (dest);
 }
