@@ -12,19 +12,17 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i, j;
+	int e = 0;
 
-	i = strlen(s1);
-	j = strlen(s2);
-
-	if (i <= j)
+	while (*s1)
 	{
-		return (-15);
-	} else if (i == j)
-	{
-		return (0);
-	} else 
-	{
-		return (15);
+		if (*s1 != *s2)
+		{
+			e = ((int)*s1 - 48) - ((int)*s2 - 48);
+			break;
+		}
+		s1++;
+		s2++;
 	}
+	return (e);
 }
