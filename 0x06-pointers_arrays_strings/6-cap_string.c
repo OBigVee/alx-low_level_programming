@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 #define SIZE 14
 
 /**
@@ -27,7 +28,9 @@ char *cap_string(char *n)
 		{
 			if (n[i] == s_char[j])
 			{
-				*(n + i + 1) -= 32;
+				if (islower(n[i + 1]))
+					*(n + i + 1) = ((int)*(n + i + 1)) - 32;
+
 			}
 		}
 	}
