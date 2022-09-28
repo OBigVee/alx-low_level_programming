@@ -1,3 +1,3 @@
 # Recursion  
-![image](/img/recursion_meme.jpg)  
+![img](img/recursion_meme.jpg)  
 
