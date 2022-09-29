@@ -17,10 +17,10 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * check_square - function checks if the multiplication of two int eqauls to 'n'.
+ * check_square - function checks if the multiplication of 2 int eqauls to 'n'.
  * @n: value to check for
  * @val: value to be multiplied together.
- * Return: int 
+ * Return: int
  */
 
 int check_square(int n, int val)
