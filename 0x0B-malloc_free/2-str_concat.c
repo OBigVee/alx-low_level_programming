@@ -22,19 +22,30 @@ char *str_concat(char *s1, char *s2)
 
 	ptr_s3 = malloc(strlen(s1) + strlen(s2));
 
-	for (i = 0; i < strlen(s1); i++)
+	if (ptr_s3 == NULL)
 	{
-		if (s1[i] != '\0')
+		return (NULL);
+	}
+
+	if (s1 == NULL)
+	{
+		for (i = 0; i < strlen(s1); i++)
 		{
-			ptr_s3[i] = s1[i];
+			if (s1[i] != '\0')
+			{
+				ptr_s3[i] = s1[i];
+			}
 		}
 	}
 
-	for (j = 0; j < strlen(s2); j++)
+	if (s2 == NULL)
 	{
-		ptr_s3[i + j] = s2[j];
+		for (j = 0; j < strlen(s2); j++)
+		{
+			ptr_s3[i + j] = s2[j];
+		}
+		ptr_s3[i + j + 1] = '\0';
 	}
-	ptr_s3[i + j + 1] = '\0';
 
 	return (ptr_s3);
 }
