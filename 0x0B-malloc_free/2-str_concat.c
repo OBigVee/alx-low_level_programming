@@ -53,9 +53,9 @@ char *str_concat(char *s1, char *s2)
 
 	ptr_s3 = malloc(size1 + size2 + 1);
 
-	if (ptr_s3 == NULL)
+	if (ptr_s3 == 0)
 	{
-		return (NULL);
+		return (0);
 	}
 	for (i = 0; i <= size1 + size2; i++)
 	{
