@@ -4,6 +4,21 @@
 #include <string.h>
 
 /**
+  * getstrlen - function get the length of a string.
+  * @s:string
+  * Return: length of string
+  */
+
+int getstrlen(char *s)
+{
+	int size = 0;
+
+	for ( ; size != '\0'; size++)
+		;
+	return (size);
+}
+
+/**
  * *str_concat - function concatenates two strings.
  * @s1: pointer to char of the string to be appended to.
  * @s2: pointer to char of the string which is to be appended.
@@ -17,35 +32,35 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j;
+	int i, size1, size2;
 	char *ptr_s3;
 
-	ptr_s3 = malloc(strlen(s1) + strlen(s2));
+	if (s1 == NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
+
+	size1 = getstrlen(s1);
+	size2 = getstrlen(s2);
+
+	ptr_s3 = malloc(size1 + size2 + 1);
 
 	if (ptr_s3 == NULL)
 	{
 		return (NULL);
 	}
-
-	if (s1)
+	for (i = 0; i <= size1 + size2; i++)
 	{
-		for (i = 0; i < strlen(s1); i++)
+		if (i < size1)
 		{
-			if (s1[i] != '\0')
-			{
-				ptr_s3[i] = s1[i];
-			}
+			ptr_s3[i] = s1[i];
+		} else
+		{
+			ptr_s3[i] = s2[i - size1];
 		}
 	}
 
-	if (s2)
-	{
-		for (j = 0; j < strlen(s2); j++)
-		{
-			ptr_s3[i + j] = s2[j];
-		}
-		ptr_s3[i + j] = '\0';
-	}
+	ptr_s3[i] = '\0';
 
 	return (ptr_s3);
 }
