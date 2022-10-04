@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+/**
+  * getstrlen - function get the length of a string.
+  * @s:string
+  * Return: length of string
+  */
+int getstrlen(char *s);
+
 /**
   * getstrlen - function get the length of a string.
   * @s:string
@@ -13,7 +21,7 @@ int getstrlen(char *s)
 {
 	int size = 0;
 
-	for ( ; size != '\0'; size++)
+	for ( ; s[size] != '\0'; size++)
 		;
 	return (size);
 }
