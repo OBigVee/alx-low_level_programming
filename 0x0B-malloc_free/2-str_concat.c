@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	if (s1 == NULL)
+	if (s1)
 	{
 		for (i = 0; i < strlen(s1); i++)
 		{
@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
-	if (s2 == NULL)
+	if (s2)
 	{
 		for (j = 0; j < strlen(s2); j++)
 		{
