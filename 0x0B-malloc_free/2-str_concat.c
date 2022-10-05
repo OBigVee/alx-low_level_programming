@@ -55,7 +55,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (ptr_s3 == 0)
 	{
-		return (0);
+		return (NULL);
 	}
 	for (i = 0; i <= size1 + size2; i++)
 	{
