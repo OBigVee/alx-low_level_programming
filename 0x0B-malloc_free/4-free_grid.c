@@ -12,8 +12,8 @@
 void free_grid(int **grid, int height)
 {
 	int i, **new_matrix;
-	new_matrix = grid;
 
+	new_matrix = grid;
 	for (i = 0; i < height; i++)
 	{
 		free(new_matrix[i]);
