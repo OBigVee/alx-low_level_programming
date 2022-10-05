@@ -11,13 +11,12 @@
 
 void free_grid(int **grid, int height)
 {
-	int i, **new_matrix;
-
-	/*new_matrix = malloc(height * sizeof(*grid));*/
+	int i;
 	new_matrix = grid;
 
 	for (i = 0; i < height; i++)
 	{
 		free(new_matrix[i]);
 	}
+	free(new_matrix);
 }
