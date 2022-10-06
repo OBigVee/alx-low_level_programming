@@ -26,7 +26,7 @@ int *array_range(int min, int max)
 	{
 		mem_block[i] = min + i;
 	}
-	mem_block[i] = '\0';
+	/*mem_block[i] = '\0';*/
 
 	return (mem_block);
 }
