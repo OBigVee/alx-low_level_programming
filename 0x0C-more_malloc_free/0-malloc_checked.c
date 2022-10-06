@@ -10,9 +10,8 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *mem;
+	void *mem_bloeck = malloc(b);
 
-	mem = malloc(sizeof(b));
 	if (mem == 0)
 	{
 		exit(98);
