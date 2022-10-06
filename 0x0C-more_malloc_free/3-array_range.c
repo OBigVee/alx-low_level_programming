@@ -22,9 +22,9 @@ int *array_range(int min, int max)
 	mem_block = malloc(max * sizeof(max) + 1);
 	if (mem_block == 0)
 		return (NULL);
-	for (i = min; i < max + 1; i++)
+	for (i = 0; i < max + 1; i++)
 	{
-		mem_block[i] = i;
+		mem_block[i] = min + i;
 	}
 	mem_block[i] = '\0';
 
