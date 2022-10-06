@@ -38,7 +38,7 @@ int getstrlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int j;
-	int i, size1, size2;
+	int i, size1;
 	char *memo_block;
 
 	if (s1 == NULL)
@@ -46,9 +46,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		*s2 = '\0';
 	size1 = getstrlen(s1);
-	size2 = getstrlen(s2);
 
-	memo_block = malloc((size1 + size2) * sizeof(char) + 1);
+	memo_block = malloc((size1 + n) * sizeof(char) + 1);
 
 	if (memo_block == NULL)
 		return (0);
