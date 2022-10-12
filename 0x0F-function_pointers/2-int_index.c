@@ -12,9 +12,10 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
+	int idx;
+
 	if (size <= 0 || array == NULL || cmp == NULL)
 		return (-1);
-	int idx;
 
 	for (idx = 0; idx < size; idx++)
 	{
