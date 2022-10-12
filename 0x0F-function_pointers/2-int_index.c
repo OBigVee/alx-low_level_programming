@@ -14,20 +14,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	if (size <= 0 || array == NULL || cmp == NULL)
 		return (-1);
-	if (array != NULL)
-	{
-		int idx;
+	int idx;
 
-		for (idx = 0; idx < size; idx++)
-		{
-			if (cmp(array[idx]))
-				return (idx);
-		}
-		/*for (idx = 0; idx < size; ++idx)
-		{
-			printf("array[%d] = %d\n", idx, array[idx]);
-		}
-		cmp(array[idx]);*/
+	for (idx = 0; idx < size; idx++)
+	{
+		if (cmp(array[idx]))
+			return (idx);
 	}
 	return (-1);
 }
