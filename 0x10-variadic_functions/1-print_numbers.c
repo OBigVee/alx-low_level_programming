@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - function prints number by a new line.
- * @seperator: is the string to be printed between numbers
+ * @separator: is the string to be printed between numbers
  * @n: is the number of integers passed to the function
  * Return: 0
  */
@@ -16,8 +16,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < n; i++)
 		{
 			printf("%d", va_arg(list, int));
-			if (i != n-1 && separator != NULL)
+			if (i != n - 1 && separator != NULL)
+			{
 				printf("%s", separator);
+			}
 		}
 	va_end(list);
 	putchar('\n');
