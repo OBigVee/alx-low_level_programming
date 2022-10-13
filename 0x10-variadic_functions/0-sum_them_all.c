@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
  * sum_them_all - function returns the sum of all its parameters.
@@ -9,14 +7,15 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
+	if (n == 0)
+		return (0);
+
 	unsigned int i;
 	int sum;
 
 	/* variable ap has a pointer as it type*/
 	va_list ap;
-	
-	if (n == 0)
-		return (0);
+
 	/* n simply means argc i.e the number of arguments*/
 	va_start(ap, n);
 	sum = 0;
