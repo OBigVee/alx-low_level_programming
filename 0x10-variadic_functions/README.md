@@ -1,5 +1,0 @@
-# C - Variadic functions
-
-#### Resources
-
-
