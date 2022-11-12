@@ -20,12 +20,12 @@ unsigned int binary_to_uint(const char *b)
 	/**
 	 * check if all the values in b are 0 or 1
 	 */
-	for (i = 0; b[i] != '\0'; i++)
+	i = 0;
+	while (b[i] != '\0')
 	{
-		if (b[i] != '0' &&  b[i] != '1')
-		{
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		}
+		i++;
 	}
 
 	for (i = 0; b[i] != '\0'; i++)
