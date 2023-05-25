@@ -1,20 +1,20 @@
 # Compiler
-CC=gcc
+CC = gcc
 
 # .c source files
-SRC=main.c school.c
+SRC = main.c school.c
 
 # Object files
-OBJ=$(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 # Executable school
-Name=school
+Name = school
 
 # Program to delete files
-RM=rm -f
+RM = rm -f
 
 # Compiler flags
-CFLAGS=-Wall -Werror -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
