@@ -1,7 +1,4 @@
-# Executable school
-Name=school
-
-# Compieer
+# Compiler
 CC=gcc
 
 # .c source files
@@ -9,6 +6,9 @@ SRC=main.c school.c
 
 # Object files
 OBJ=$(SRC:.c=.o)
+
+# Executable school
+Name=school
 
 # Program to delete files
 RM=rm -f
@@ -20,7 +20,7 @@ all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # Mark Phony targets
-.POHNY: clean oclean fclean
+.POHNY : clean oclean fclean
 
 # Delets all Emacs and Vim temporary files, the executables, and object files
 clean:
