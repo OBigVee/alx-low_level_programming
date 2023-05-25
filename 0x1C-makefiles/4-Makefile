@@ -1,0 +1,37 @@
+# Executable school
+Name=school
+
+# Compieer
+CC=gcc
+
+# .c source files
+SRC=main.c school.c
+
+# Object files
+OBJ=$(CC:.-o)
+
+# Program to delete files
+RM=rm -f
+
+# Compiler flags
+CFLAGS=-Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+# Mark Phony targets
+.POHNY: clean oclean fclean
+
+# Delets all Emacs and Vim temporary files, the executables, and object files
+clean:
+	$(RM) $(wildcard *~) $(wildcard *.swp) $(NAME)
+
+# Delete the object files
+oclean:
+	$(RM) $(OBJ)
+
+# Deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Forces recompilation of source files
+re: oclean all
