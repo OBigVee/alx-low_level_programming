@@ -8,7 +8,7 @@ CC=gcc
 SRC=main.c school.c
 
 # Object files
-OBJ=$(CC:.-o)
+OBJ=$(SRC:.c=.o)
 
 # Program to delete files
 RM=rm -f
