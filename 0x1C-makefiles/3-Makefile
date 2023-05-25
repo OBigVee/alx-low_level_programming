@@ -16,9 +16,12 @@ RM=rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+# Mark phony targets
+.PHONY: clean oclean fclean
+
 # Clean Emacs, Vim files, and executable
 clean:
-	$(RM) *~$(NAME)
+	$(RM) $(wildcard *~) $(wildcard *.swp) $(NAME)
 
 # Clean object files
 oclean:
@@ -28,4 +31,4 @@ oclean:
 fclean: clean oclean
 
 # Force recompilation of all source files
-re: fclean all
+re: oclean all
