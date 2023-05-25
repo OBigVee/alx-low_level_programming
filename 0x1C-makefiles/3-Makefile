@@ -1,0 +1,31 @@
+# Executable name
+NAME=school
+
+# Compiler
+CC=gcc
+
+# Source files
+SRC=main.c school.c
+
+# Object files
+OBJ=$(SRC:.c=.o)
+
+# File deletion program
+RM=rm -f
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Clean Emacs, Vim files, and executable
+clean:
+	$(RM) *~$(NAME)
+
+# Clean object files
+oclean:
+	$(RM) $(OBJ)
+
+# Clean Emacs, Vim files, executable, and object files
+fclean: clean oclean
+
+# Force recompilation of all source files
+re: fclean all
