@@ -12,9 +12,9 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	unsigned int j;
+	unsigned int bit_val;
 
-	j = 0;
+	bit_val = 0;
 	if (b == NULL)
 		return (0);
 	/**
@@ -30,9 +30,9 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		j <<= 1;
+		bit_val <<= 1;
 		if (b[i] == '1')
-			j += 1;
+			bit_val += 1;
 	}
-	return (j);
+	return (bit_val);
 }
