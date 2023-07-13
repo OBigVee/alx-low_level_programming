@@ -14,6 +14,9 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 	unsigned int bit_val;
 
+	/**
+	 * check if b is NULL
+	*/
 	bit_val = 0;
 	if (b == NULL)
 		return (0);
