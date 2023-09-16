@@ -5,7 +5,7 @@
  * main - Displays the information contained in the ELF header at the
  * start of an ELF file
  * @argc: The number of arguments
- * @argv: The arguments
+ * @argv: The argument s
  *
  * Return: 0 if successful, otherwise a number between 97 and
  * 100 (each number represents an error)
